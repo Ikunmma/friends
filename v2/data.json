@@ -1,0 +1,33 @@
+{
+  "version": "v2",
+  "content": [
+    {
+      "title": "Watermelonabc",
+      "url": "https://watermelonabc.top/",
+      "avatar": "https://watermelonabc.top/asset/icon/Avatar.png",
+      "screenshot": "",
+      "description": "比起遥不可及的理想，我更想关注敏感的当下",
+      "issue_number": 2,
+      "labels": [
+        {
+          "name": "Reverse",
+          "color": "e4e669"
+        }
+      ]
+    },
+    {
+      "title": "无言の小屋",
+      "url": "https://ikunmma.github.io/",
+      "avatar": "https://raw.githubusercontent.com/zkk1233/Picture/main/20250715114957806.jpg",
+      "screenshot": "",
+      "description": "在谷底也要开花，在海底也要望月",
+      "issue_number": 1,
+      "labels": [
+        {
+          "name": "Web",
+          "color": "0075ca"
+        }
+      ]
+    }
+  ]
+}
