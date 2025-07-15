@@ -135,7 +135,7 @@ export const config = {
     // 是否启用生成器
     enabled: true,
     // 目标仓库地址（格式：用户名/仓库名）
-    repo: 'xaoxuu/hexo-theme-stellar-showcase',
+    repo: 'Ikunmma/friends',
     // Issue排序方式
     // updated/created: 更新时间/创建时间
     sort: 'created',
@@ -144,5 +144,40 @@ export const config = {
     // 需要排除的Issue标签
     // 包含这些标签的Issue将不会被解析
     exclude_labels: ["审核中"]
+  }
+}
+// config.js
+export const config = {
+  theme_checker: {
+    // 是否启用网站主题检查
+    enabled: true,
+    // 包含这些关键词的Issue将被检查
+    include_keyword: '# 站点信息',
+    // 包含这些标签的Issue将不会被检查
+    exclude_labels: ["审核中"],
+    // 主题标识meta标签选择器
+    meta_tag: 'meta[name="hexo-theme"]',
+    // 期望的主题名称
+    theme_name: 'Stellar',
+    // 主题版本号属性名
+    version_attr: 'theme-version',
+    // 主题名称属性名
+    name_attr: 'theme-name',
+    // 主题内容属性名
+    content_attr: 'content',
+
+  }
+}
+// config.js
+export const config = {
+  link_checker: {
+    // 是否启用链接检查
+    enabled: true,
+    // 包含这些关键词的Issue将被检查
+    include_keyword: '# 友链信息',
+    // 包含这些标签的Issue将不会被检查
+    exclude_labels: ["审核中"],
+    // 目标链接
+    link: 'https://xaoxuu.com',
   }
 }
