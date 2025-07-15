@@ -128,3 +128,21 @@ export const config = {
   },
 
 };
+
+// config.js
+export const config = {
+  generator: {
+    // 是否启用生成器
+    enabled: true,
+    // 目标仓库地址（格式：用户名/仓库名）
+    repo: 'xaoxuu/hexo-theme-stellar-showcase',
+    // Issue排序方式
+    // updated/created: 更新时间/创建时间
+    sort: 'created',
+    // desc/asc: 降序/升序
+    direction: 'desc',
+    // 需要排除的Issue标签
+    // 包含这些标签的Issue将不会被解析
+    exclude_labels: ["审核中"]
+  }
+}
