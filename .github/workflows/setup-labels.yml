@@ -1,0 +1,47 @@
+name: Setup Labels
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  setup-labels:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create or update labels
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const labels = [
+              ['审核中', 'd4a72c', '等待站长审核'],
+              ['白名单', '228879', '跳过自动失效检查'],
+              ['风险网站', 'b60205', '不在友链页面展示'],
+              ['失联', 'd93f0b', '自动检测时暂时无法访问'],
+              ['长期失联', '5319e7', '长期无法访问并关闭申请'],
+              ['缺少文章', 'fbca04', '缺少可供阅读的原创内容'],
+              ['未添加友链', 'c5def5', '等待添加本站友链']
+            ];
+
+            for (const [name, color, description] of labels) {
+              try {
+                await github.rest.issues.updateLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name,
+                  color,
+                  description
+                });
+              } catch (error) {
+                if (error.status !== 404) throw error;
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name,
+                  color,
+                  description
+                });
+              }
+            }

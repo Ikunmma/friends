@@ -1,0 +1,60 @@
+name: 友链模板
+description: 申请加入无言の小屋的动态友链。
+labels: ['审核中']
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 检查清单
+      description: 请确认以下基础要求。
+      options:
+        - required: true
+          label: 站点内容合法，无恶意代码、诱导下载或大量侵入式广告。
+        - required: true
+          label: 站点可通过 HTTPS 正常访问，并有真实可读的内容。
+        - required: true
+          label: 同意本站每天访问一次站点地址与订阅地址，用于状态检测和文章更新。
+  - type: textarea
+    id: json-data
+    validations:
+      required: true
+    attributes:
+      label: 友链信息
+      description: 请在双引号中填写，不要修改格式。
+      value: |
+        <!--
+        请在下方的 `JSON` 块中填写，字段说明：
+        - title: 友链标题
+        - url: 友链地址
+        - icon: 网站头像或图标
+        - snapshot: 网站截图（可留空）
+        - description: 一句话简介
+        - feed: 订阅地址（抓取并显示最新文章，没有 feed 地址时，排序会靠后）
+        -->
+        
+        ```json
+        {
+            "title": "",
+            "url": "",
+            "icon": "",
+            "snapshot": "",
+            "description": "",
+            "feed": ""
+        }
+        ```
+
+        
+  - type: input
+    id: friends-html
+    attributes:
+      label: 友链地址
+      description: 请输入您的友链页面地址，用于人工审核和 GitHub Actions 自动检测。（不必提前添加本站为友链，审核通过后再添加也不迟。）
+      placeholder: "如: https://example.com/friends/"
+    validations:
+      required: true
+  - type: input
+    id: friends-repo
+    attributes:
+      label: 友链仓库（可选）
+      description: 如果您使用 issue 作为友链源，请附上 issue 仓库链接，博主将会前往您的仓库自行填写友链。
+      placeholder: "如: https://github.com/username/friends/"
