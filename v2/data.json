@@ -1,0 +1,54 @@
+{
+  "version": "v2",
+  "content": [
+    {
+      "title": "Watermelonabc的Blog",
+      "url": "https://blog.watermelonabc.top/",
+      "icon": "https://blog.watermelonabc.top/assets/icon/Avatar.webp",
+      "snapshot": "",
+      "description": "追寻各色世界",
+      "feed": "https://blog.watermelonabc.top/rss.xml",
+      "posts": [
+        {
+          "title": "福州大学 2026 Linux 操作系统设计实践笔记",
+          "link": "https://blog.watermelonabc.top/p/linux-system-design/",
+          "published": "2026-09-11 08:00"
+        },
+        {
+          "title": "福州大学2026软件工程课程笔记",
+          "link": "https://blog.watermelonabc.top/p/software-engineering-2026/",
+          "published": "2026-09-04 08:00"
+        },
+        {
+          "title": "又一个黑客模拟游戏",
+          "link": "https://blog.watermelonabc.top/p/4be45b93/",
+          "published": "2026-08-04 19:19"
+        }
+      ],
+      "issue_number": 1,
+      "labels": []
+    },
+    {
+      "title": "丁晓炜",
+      "url": "https://ddxww.github.io/",
+      "icon": "https://ddxww.github.io/img/avatar.jpg",
+      "snapshot": "",
+      "description": "在持续学习中积累，在动手实践中成长。",
+      "feed": "https://ddxww.github.io/feed.xml",
+      "posts": [
+        {
+          "title": "正在上晚课：生物信息学",
+          "link": "https://ddxww.github.io/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/2026/09/06/bioinformatics-evening-class/",
+          "published": "2026-09-06 21:00"
+        },
+        {
+          "title": "我的第一篇日志",
+          "link": "https://ddxww.github.io/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/2026/09/06/first-log/",
+          "published": "2026-09-06 20:00"
+        }
+      ],
+      "issue_number": 2,
+      "labels": []
+    }
+  ]
+}
